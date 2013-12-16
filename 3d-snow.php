@@ -4,12 +4,13 @@ Plugin Name: 3D Snow
 Plugin Script: 3d-snow.php
 Plugin URI: http://www.vanmeerdervoort.nl/3d-snow-wordpress-plugin
 Description: An awesome 3D snow effect for your website! Just install and activate to make it snow.
-Version: 0.1
+Version: 0.2
 License: GPL
 Author: <a href="http://www.vanmeerdervoort.nl">vanMeerdervoort</a>
 Author URI: http://www.vanmeerdervoort.nl/
 
 === RELEASE NOTES ===
+2013-12-16 - v0.2 - bug fixes
 2013-12-10 - v0.1 - first version
 */
 
