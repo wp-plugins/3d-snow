@@ -5,7 +5,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: snow, effect, winter, christmas
 Requires at least: 3.0
 Tested up to: 3.6
-Stable tag: 0.2
+Stable tag: trunk
 
 Add an Awesome 3D snow effect to your WordPress website! Just install and activate to make it snow!
 
