@@ -2,14 +2,16 @@
 /*
 Plugin Name: 3D Snow
 Plugin Script: 3d-snow.php
-Plugin URI: http://www.vanmeerdervoort.nl/3d-snow-wordpress-plugin
+Plugin URI: http://www.vanmeerdervoort.nl/3d-snow-wordpress-plugin.html
 Description: An awesome 3D snow effect for your website! Just install and activate to make it snow.
-Version: 0.2
+Version: 0.3
 License: GPL
-Author: <a href="http://www.vanmeerdervoort.nl">vanMeerdervoort</a>
+Author: vanMeerdervoort
 Author URI: http://www.vanmeerdervoort.nl/
 
 === RELEASE NOTES ===
+2014-12-18 - v0.3 - bug fixes and compatibility with wordpress 4.0.1
+2013-12-16 - v0.2.1 - bug fixes
 2013-12-16 - v0.2 - bug fixes
 2013-12-10 - v0.1 - first version
 */
@@ -43,23 +45,22 @@ function threeDsnow_add_scripts() {
 	wp_enqueue_script('snowinit');
 }
 
-add_action( 'wp_enqueue_scripts', 'threeDsnow_add_scripts' );  
+
 
 function threeDsnow_add_enddiv(){
 
-echo "</div>";
+	echo "</div><!-- 3D Snow by vanMeerdervoort.nl -->";
+
 }
 
 if ( !is_admin() ) {
+	
+	add_action( 'wp_enqueue_scripts', 'threeDsnow_add_scripts' );  
 
-?>
+	echo"<!-- 3D Snow by vanMeerdervoort.nl --><div id='showBox' style='position: absolute; top: -10px; left: 0px; z-index: 0; width: 100%; height: 1px;background-color:#fff'>
+	<canvas width='1' height='1' style='z-index:-1;'></canvas>";
 
-<div id="showBox" style="position: absolute; top: -10px; left: 0px; z-index: 0; width: 100%; height: 1px;background-color:#fff">
-<canvas width="1" height="1" style="z-index:-1;"></canvas>
-<?
 
-add_action('wp_footer', 'threeDsnow_add_enddiv');
+	add_action('wp_footer', 'threeDsnow_add_enddiv');
 
 }
-
-?>
